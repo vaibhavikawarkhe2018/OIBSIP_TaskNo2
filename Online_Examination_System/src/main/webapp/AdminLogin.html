@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('images/login_Background.PNG');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .login-container {
+            position: absolute;
+            top: 26%; 
+            left: 73%;
+            transform: translate(-20%, -20%);
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            /*border-radius: 10px;*/
+            padding: 40px;
+            width: 305px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: white;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+             color:#482B29;;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        label {
+            font-size: 1.7em;
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+            color:black;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+        }
+
+        /* Styling for the green box */
+        .login-container {
+            background: rgba(98, 149, 84, 0.85); /* Updated green background*/
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Admin Login</h2>
+        <form action="adminLogin" method="post">
+            <label for="uname">Username</label>
+            <input type="text" name="uname" placeholder="Username" required>
+            <label for="pword">Password</label>
+            <input type="password" name="pword" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>

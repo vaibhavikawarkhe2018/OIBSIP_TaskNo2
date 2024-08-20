@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Question</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('images/question.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background: rgba(0, 0, 0, 0.6); /* Dark transparent overlay */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 400px;
+            text-align: center;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            color: #FFD700;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1.5px solid black;
+            outline: none;
+            font-size: 1em;
+            background: rgba(255, 255, 255, 0.8); /* Light transparent overlay for fields */
+            color: #333;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #482B29;;
+            color: #fff;
+            cursor: pointer;
+            background-repeat: no-repeat;
+            background-position: left center;
+            font-size:18px;
+            padding-left: 40px; /* Adjust padding to fit the image */
+            margin:10px 10px;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #482B29;;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2><img src="images/add_new_question.png" alt="Add">Add New Question</h2>
+        <form action="addQuestion" method="post">
+            <input type="text" name="question" placeholder="Question" required><br>
+            <input type="text" name="option1" placeholder="Option 1" required><br>
+            <input type="text" name="option2" placeholder="Option 2" required><br>
+            <input type="text" name="option3" placeholder="Option 3" required><br>
+            <input type="text" name="option4" placeholder="Option 4" required><br>
+            <input type="text" name="answer" placeholder="Answer" required><br>
+            <input type="submit" value="Add Question">
+        </form>
+    </div>
+</body>
+</html>
